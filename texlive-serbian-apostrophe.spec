@@ -48,6 +48,7 @@ appropriate apostrophes.
 %doc %{_texmfdistdir}/doc/latex/serbian-apostrophe/apostrophe-list.tex
 %doc %{_texmfdistdir}/doc/latex/serbian-apostrophe/serbian-apostrophe.pdf
 %doc %{_texmfdistdir}/doc/latex/serbian-apostrophe/serbian-apostrophe.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +59,5 @@ appropriate apostrophes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
