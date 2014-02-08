@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-serbian-apostrophe
 Version:	20110830
-Release:	2
+Release:	3
 Summary:	Commands for Serbian words with apostrophes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/serbian/serbian-apostrophe
