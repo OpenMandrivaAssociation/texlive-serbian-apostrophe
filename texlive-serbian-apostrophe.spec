@@ -1,18 +1,12 @@
-# revision 23799
-# category Package
-# catalog-ctan /language/serbian/serbian-apostrophe
-# catalog-date 2011-08-30 14:04:46 +0200
-# catalog-license lppl1.3
-# catalog-version undef
 Name:		texlive-serbian-apostrophe
-Version:	20190228
+Version:	23799
 Release:	1
 Summary:	Commands for Serbian words with apostrophes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/serbian/serbian-apostrophe
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/serbian-apostrophe.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/serbian-apostrophe.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/serbian-apostrophe.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/serbian-apostrophe.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ Serbian words) whose expansion is the Serbian word with
 appropriate apostrophes.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,24 +36,10 @@ appropriate apostrophes.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110830-2
-+ Revision: 755910
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110830-1
-+ Revision: 719508
-- texlive-serbian-apostrophe
-- texlive-serbian-apostrophe
-- texlive-serbian-apostrophe
-- texlive-serbian-apostrophe
-
