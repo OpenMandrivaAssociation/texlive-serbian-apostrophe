@@ -3,7 +3,7 @@ Version:	23799
 Release:	2
 Summary:	Commands for Serbian words with apostrophes
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/serbian/serbian-apostrophe
+URL:		https://www.ctan.org/tex-archive/language/serbian/serbian-apostrophe
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/serbian-apostrophe.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/serbian-apostrophe.doc.r%{version}.tar.xz
